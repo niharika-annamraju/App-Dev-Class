@@ -431,7 +431,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addContainerGap(72, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-public String imgePath;
+public String imgePath = "";
     private void jOpenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOpenBtnActionPerformed
         JFileChooser chooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("*.image", "jpg");
@@ -543,7 +543,14 @@ public String imgePath;
         userProfile.setDegree2Start(jTxtDegree2Start.getText());
         userProfile.setDegree2End(jTxtDegree2End.getText());  
         
-        JOptionPane.showMessageDialog(this, "Information is saved");        // TODO add your handling code here:
+        if(imgePath.length()==0)
+            JOptionPane.showMessageDialog(null, "Please upload a picture");
+        else
+            JOptionPane.showMessageDialog(this, "Information is saved");  
+    
+ 
+        
+              // TODO add your handling code here:
     }//GEN-LAST:event_jBtnSaveActionPerformed
 
 
